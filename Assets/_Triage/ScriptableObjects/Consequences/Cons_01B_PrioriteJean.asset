@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5739dd21f82fa336ca50d580dc8029ef, type: 3}
+  m_Name: Cons_01B_PrioriteJean
+  m_EditorClassIdentifier: Assembly-CSharp::ConsequenceData
+  immediateText: "Jean Bernard est sauv\xE9. Le maire attend, furieux."
+  laterText: "Le maire porte plainte. Budget impact\xE9, presse hostile. Mais l'\xE9quipe
+    m\xE9dicale vous soutient."
+  medicalScoreDelta: 15
+  teamTrustDelta: 10
+  publicReputationDelta: -10
+  budgetBalanceDelta: -10
+  triggersInternalInquiry: 0
+  triggersStrike: 0
+  triggersMediaCoverage: 1
+  triggersLegalAction: 1
+  triggersServiceClosure: 0
+  tone: 1
+  resultScreenColor: {r: 0.11764706, g: 0.3137255, b: 0.39215687, a: 0}

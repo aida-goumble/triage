@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a653966e3e14f59a9bfd92a70d1b4e, type: 3}
+  m_Name: Pat_Marchetti_Robert
+  m_EditorClassIdentifier: Assembly-CSharp::PatientData
+  patientName: Robert Marchetti
+  age: 54
+  portrait: {fileID: 0}
+  severityLevel: 2
+  diagnosis: Douleurs thoraciques non critiques
+  arrivalOrder: "2e arriv\xE9"
+  needsOperatingRoom: 0
+  surgeonsRequired: 0
+  bedCost: 1
+  budgetCost: 500
+  needsRareMedication: 0
+  survivalChance: 0
+  backgroundContext: "Maire de la ville. Venu avec attach\xE9 de cabinet."
+  hasPressure: 1
+  pressureDescription: "Menace de plainte, contact avec la direction, m\xE9dias locaux"
+  pressureType: 1

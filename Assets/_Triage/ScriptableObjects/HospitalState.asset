@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a6a20015e4034be9944a457a7fe1a3, type: 3}
+  m_Name: HospitalState
+  m_EditorClassIdentifier: Assembly-CSharp::HospitalState
+  startingBeds: 8
+  startingOperatingRooms: 2
+  startingSurgeons: 4
+  startingBudget: 50000
+  startingRareMedication: 1
+  currentBeds: 8
+  currentOperatingRooms: 2
+  currentSurgeons: 4
+  currentBudget: 50000
+  rareMedicationAvailable: 1
+  startingMedicalScore: 70
+  startingTeamTrust: 70
+  startingPublicReputation: 70
+  startingBudgetBalance: 70
+  medicalScore: 70
+  teamTrust: 70
+  publicReputation: 70
+  budgetBalance: 70
+  criticalThreshold: 30
+  scenariosPlayed: 0
+  playedScenarioIds: 
+  moralFailCount: 0
+  moralSuccessCount: 0
