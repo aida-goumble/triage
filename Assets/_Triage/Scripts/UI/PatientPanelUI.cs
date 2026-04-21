@@ -81,7 +81,8 @@ public class PatientPanelUI : MonoBehaviour
         DisplayPatient(patient);
     }
 
-    private void DisplayPatient(PatientData patient)
+    //private void DisplayPatient(PatientData patient)
+    public void DisplayPatient(PatientData patient)
     {
         // --- Textes de base ---
         if (nameText)         nameText.text         = patient.patientName;
