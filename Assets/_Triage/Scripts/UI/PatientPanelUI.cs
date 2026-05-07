@@ -47,6 +47,12 @@ public class PatientPanelUI : MonoBehaviour
     [SerializeField] private Color medSeverityColor    = new Color(1f,   0.6f, 0f);    // Orange
     [SerializeField] private Color highSeverityColor   = new Color(0.9f, 0.1f, 0.1f); // Rouge
 
+    [Header("Impact des jauges")]
+    [SerializeField] private TextMeshProUGUI impactReputationText;
+    [SerializeField] private TextMeshProUGUI impactMoralText;
+
+    [Header("Gravité — carrés")]
+[SerializeField] private Image[] graviteDots; 
     // =========================================================
     // INITIALISATION
     // =========================================================
@@ -82,53 +88,90 @@ public class PatientPanelUI : MonoBehaviour
     }
 
     //private void DisplayPatient(PatientData patient)
-    public void DisplayPatient(PatientData patient)
+public void DisplayPatient(PatientData patient)
+{
+    // --- Textes de base ---
+    if (nameText)         nameText.text         = patient.patientName;
+    if (ageText)          ageText.text          = $"{patient.age} ans";
+    if (diagnosisText)    diagnosisText.text    = patient.diagnosis;
+    if (arrivalOrderText) arrivalOrderText.text = patient.arrivalOrder;
+    if (backgroundText)   backgroundText.text   = patient.backgroundContext;
+
+    // --- Survie (uniquement pour les dilemmes éthiques) ---
+    if (survivalChanceText)
     {
-        // --- Textes de base ---
-        if (nameText)         nameText.text         = patient.patientName;
-        if (ageText)          ageText.text          = $"{patient.age} ans";
-        if (diagnosisText)    diagnosisText.text    = patient.diagnosis;
-        if (arrivalOrderText) arrivalOrderText.text = patient.arrivalOrder;
-        if (backgroundText)   backgroundText.text  = patient.backgroundContext;
-        if (severityText)     severityText.text     = $"Gravité : {patient.severityLevel}/10";
-
-        // --- Survie (uniquement pour les dilemmes éthiques) ---
-        if (survivalChanceText)
+        if (patient.survivalChance > 0)
         {
-            if (patient.survivalChance > 0)
-            {
-                survivalChanceText.gameObject.SetActive(true);
-                survivalChanceText.text = $"Survie estimée : {patient.survivalChance}%";
-            }
-            else
-            {
-                survivalChanceText.gameObject.SetActive(false);
-            }
+            survivalChanceText.gameObject.SetActive(true);
+            survivalChanceText.text = $"Survie estimée : {patient.survivalChance}%";
         }
-
-        // --- Portrait ---
-        if (portraitImage && patient.portrait != null)
+        else
         {
-            portraitImage.sprite = patient.portrait;
-            portraitImage.gameObject.SetActive(true);
+            survivalChanceText.gameObject.SetActive(false);
         }
-
-        // --- Barre de gravité ---
-        if (severityBar)
-        {
-            // Remplie proportionnellement (0 à 10)
-            severityBar.fillAmount = patient.severityLevel / 10f;
-            severityBar.color = GetSeverityColor(patient.severityLevel);
-        }
-
-        // --- Panneau de pression ---
-        if (pressurePanel)
-            pressurePanel.SetActive(patient.hasPressure);
-
-        if (pressureText && patient.hasPressure)
-            pressureText.text = patient.pressureDescription;
     }
 
+    // --- Portrait ---
+    if (portraitImage && patient.portrait != null)
+    {
+        portraitImage.sprite = patient.portrait;
+        portraitImage.gameObject.SetActive(true);
+    }
+
+    // --- Barre de gravité ---
+    if (severityBar)
+    {
+        severityBar.fillAmount = patient.severityLevel / 10f;
+        severityBar.color = GetSeverityColor(patient.severityLevel);
+    }
+
+    // --- Carrés de gravité ---
+    if (graviteDots != null)
+    {
+        for (int i = 0; i < graviteDots.Length; i++)
+        {
+            if (graviteDots[i] == null) continue;
+
+            if (i < patient.severityLevel)
+                graviteDots[i].color = GetSeverityColor(patient.severityLevel);
+            else
+                graviteDots[i].color = new Color(0.69f, 0.63f, 0.47f);
+        }
+    }
+
+    // --- Panneau de pression ---
+    if (pressurePanel)
+        pressurePanel.SetActive(patient.hasPressure);
+    if (pressureText && patient.hasPressure)
+        pressureText.text = patient.pressureDescription;
+
+    // --- Impact sur les jauges ---
+    if (GameManager.Instance != null)
+    {
+        ScenarioData scenario = GameManager.Instance.CurrentScenario;
+        ConsequenceData consequence = isPatientA
+            ? scenario.consequenceIfA
+            : scenario.consequenceIfB;
+
+        if (impactReputationText)
+        {
+            int rep = consequence.publicReputationDelta;
+            impactReputationText.text = "RÉPUTATION : " + (rep >= 0 ? "+" : "") + rep;
+            impactReputationText.color = rep >= 0
+                ? new Color(0.29f, 0.54f, 0.29f)
+                : new Color(0.77f, 0.35f, 0.16f);
+        }
+
+        if (impactMoralText)
+        {
+            int mor = consequence.moralScoreDelta;
+            impactMoralText.text = "MORAL : " + (mor >= 0 ? "+" : "") + mor;
+            impactMoralText.color = mor >= 0
+                ? new Color(0.29f, 0.54f, 0.29f)
+                : new Color(0.77f, 0.35f, 0.16f);
+        }
+    }
+}
     // =========================================================
     // UTILITAIRES
     // =========================================================

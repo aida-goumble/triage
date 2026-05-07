@@ -34,6 +34,9 @@ public class HUDController : MonoBehaviour
     [SerializeField] private Color warningColor  = new Color(1f,   0.6f, 0f);    // Orange
     [SerializeField] private Color criticalColor = new Color(0.9f, 0.1f, 0.1f); // Rouge
 
+    [Header("Moral")]
+    [SerializeField] private Image moralScoreBar;
+    [SerializeField] private TextMeshProUGUI moralScoreText;
     private float criticalTimer = 0f;
 
     // =========================================================
@@ -85,7 +88,8 @@ public class HUDController : MonoBehaviour
 
         HospitalState state = GameManager.Instance.HospitalState;
 
-        UpdateBar(medicalScoreBar,      medicalScoreText,      state.MedicalScore);
+       // UpdateBar(medicalScoreBar,      medicalScoreText,      state.MedicalScore);
+        UpdateBar(moralScoreBar, moralScoreText, state.MoralScore);
         UpdateBar(teamTrustBar,         teamTrustText,         state.TeamTrust);
         UpdateBar(publicReputationBar,  publicReputationText,  state.PublicReputation);
         UpdateBar(budgetBalanceBar,     budgetBalanceText,     state.BudgetBalance);

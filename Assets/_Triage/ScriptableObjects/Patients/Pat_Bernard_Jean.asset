@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: Jean Bernard
   age: 79
-  portrait: {fileID: 0}
+  portrait: {fileID: -227110053616664721, guid: 08fcf0704923181b385ca5e6983f02ce, type: 3}
   severityLevel: 9
   diagnosis: Urgence vitale
   arrivalOrder: "1er arriv\xE9"

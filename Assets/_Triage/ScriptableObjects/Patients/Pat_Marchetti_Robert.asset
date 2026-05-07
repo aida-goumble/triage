@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: Robert Marchetti
   age: 54
-  portrait: {fileID: 0}
+  portrait: {fileID: 5698975764937621995, guid: 2425a2591e7c78d2f8f6f45945a781e7, type: 3}
   severityLevel: 2
   diagnosis: Douleurs thoraciques non critiques
   arrivalOrder: "2e arriv\xE9"

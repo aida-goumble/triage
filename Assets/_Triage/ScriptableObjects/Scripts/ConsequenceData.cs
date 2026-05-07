@@ -23,7 +23,8 @@ public class ConsequenceData : ScriptableObject
     public int publicReputationDelta; // Réputation publique
     [Range(-30, 30)]
     public int budgetBalanceDelta;    // Équilibre budgétaire
-
+    [Range(-30, 30)]
+    public int moralScoreDelta;
     [Header("Événements spéciaux déclenchés")]
     public bool triggersInternalInquiry;   // Enquête interne
     public bool triggersStrike;            // Grève infirmières

@@ -28,6 +28,11 @@ public class HospitalState : ScriptableObject
     [SerializeField] private int currentBudget;
     [SerializeField] private bool rareMedicationAvailable;
 
+    [Header("Moral du chef de service")]
+    public int startingMoralScore = 100;
+    [SerializeField] private int moralScore;
+    public int MoralScore => moralScore;
+
     // Propriétés publiques en lecture
     public int CurrentBeds => currentBeds;
     public int CurrentOperatingRooms => currentOperatingRooms;
@@ -40,10 +45,10 @@ public class HospitalState : ScriptableObject
     // =========================================================
 
     [Header("Jauges de réputation — valeurs initiales")]
-    public int startingMedicalScore = 70;
-    public int startingTeamTrust = 70;
-    public int startingPublicReputation = 70;
-    public int startingBudgetBalance = 70;
+    public int startingMedicalScore = 100;
+    public int startingTeamTrust = 100;
+    public int startingPublicReputation = 100;
+    public int startingBudgetBalance = 100;
 
     [Header("Jauges — état courant (runtime)")]
     [SerializeField] private int medicalScore;
@@ -89,11 +94,12 @@ public class HospitalState : ScriptableObject
         currentBudget = startingBudget;
         rareMedicationAvailable = startingRareMedication;
 
-        medicalScore = startingMedicalScore;
+       // medicalScore = startingMedicalScore;
         teamTrust = startingTeamTrust;
         publicReputation = startingPublicReputation;
         budgetBalance = startingBudgetBalance;
 
+        moralScore = startingMoralScore;
         scenariosPlayed = 0;
         moralFailCount = 0;
         moralSuccessCount = 0;
@@ -124,7 +130,8 @@ public class HospitalState : ScriptableObject
     /// <summary>Applique les deltas de jauges d'une ConsequenceData.</summary>
     public void ApplyConsequence(ConsequenceData consequence)
     {
-        medicalScore     = Mathf.Clamp(medicalScore     + consequence.medicalScoreDelta,     0, 100);
+        //medicalScore     = Mathf.Clamp(medicalScore     + consequence.medicalScoreDelta,     0, 100);
+        moralScore = Mathf.Clamp(moralScore + consequence.moralScoreDelta, 0, 100);
         teamTrust        = Mathf.Clamp(teamTrust        + consequence.teamTrustDelta,        0, 100);
         publicReputation = Mathf.Clamp(publicReputation + consequence.publicReputationDelta, 0, 100);
         budgetBalance    = Mathf.Clamp(budgetBalance    + consequence.budgetBalanceDelta,    0, 100);
