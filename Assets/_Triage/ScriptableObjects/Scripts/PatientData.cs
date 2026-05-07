@@ -11,7 +11,8 @@ public class PatientData : ScriptableObject
     public string patientName;
     public int age;
     public Sprite portrait;
-
+    public Sprite characterSprite;
+    
     [Header("État médical")]
     [Range(0, 10)]
     public int severityLevel;         // 0 = stable, 10 = urgence vitale

@@ -1922,7 +1922,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 7.0773, y: -0.38689995, z: 0}
-  m_LocalScale: {x: 1.2144171, y: 1.2403857, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -8257,6 +8257,7 @@ MonoBehaviour:
   hospitalState: {fileID: 11400000, guid: a0e01559746dc5fc4b9503ab95474091, type: 2}
   scenarios:
   - {fileID: 11400000, guid: 5aa338786d9802daf9280fb8c5c3f77c, type: 2}
+  - {fileID: 11400000, guid: 6ceeecedb7f3970cc9cbceb34e8ead4a, type: 2}
   mainMenuScene: MainMenu
   triageScene: TriageScene
   resultScene: ResultScene
@@ -8815,6 +8816,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1773258441}
   - component: {fileID: 1773258440}
+  - component: {fileID: 1773258442}
   m_Layer: 0
   m_Name: ScenarioManager
   m_TagString: Untagged
@@ -8849,6 +8851,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1773258442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773258439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e54e780e5c02a90cb11a2d3918a72d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PatientSpriteUpdater
+  spritePatientA: {fileID: 2088156040}
+  spritePatientB: {fileID: 314558843}
 --- !u!1 &1774817282
 GameObject:
   m_ObjectHideFlags: 0
@@ -10740,7 +10756,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.0049496517, y: -0, z: -0, w: 0.9999878}
   m_LocalPosition: {x: -7.6213, y: -1.9125, z: 0.006}
-  m_LocalScale: {x: 1.177328, y: 1.1389601, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

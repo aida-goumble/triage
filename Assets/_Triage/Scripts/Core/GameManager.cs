@@ -134,6 +134,7 @@ public class GameManager : MonoBehaviour
 
         // 7. Passer à l'écran de résultat
         LoadResultScene();
+        //ContinueToNextScenario(); 
     }
 
     /// <summary>
