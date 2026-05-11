@@ -8356,6 +8356,8 @@ MonoBehaviour:
   scenarios:
   - {fileID: 11400000, guid: 5aa338786d9802daf9280fb8c5c3f77c, type: 2}
   - {fileID: 11400000, guid: 6ceeecedb7f3970cc9cbceb34e8ead4a, type: 2}
+  - {fileID: 11400000, guid: c15d7f344c11324468edfa9ab5fdd37e, type: 2}
+  - {fileID: 11400000, guid: 7516068d43144e147990c58e42545db3, type: 2}
   mainMenuScene: MainMenu
   triageScene: TriageScene
   resultScene: ResultScene

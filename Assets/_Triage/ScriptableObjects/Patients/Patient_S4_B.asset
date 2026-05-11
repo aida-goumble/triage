@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a653966e3e14f59a9bfd92a70d1b4e, type: 3}
+  m_Name: Patient_S4_B
+  m_EditorClassIdentifier: Assembly-CSharp::PatientData
+  patientName: Georges Petit
+  age: 77
+  portrait: {fileID: 0}
+  characterSprite: {fileID: 0}
+  severityLevel: 8
+  diagnosis: "Rupture d'an\xE9vrisme"
+  arrivalOrder: 2
+  needsOperatingRoom: 1
+  surgeonsRequired: 2
+  bedCost: 1
+  budgetCost: 50
+  needsRareMedication: 0
+  survivalChance: 55
+  backgroundContext: "Autonome et actif malgr\xE9 son \xE2ge. Pronostic l\xE9g\xE8rement
+    meilleur qu'Yvette. Meilleure qualit\xE9 de vie post-op estim\xE9e."
+  hasPressure: 0
+  pressureDescription: 
+  pressureType: 0
