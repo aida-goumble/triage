@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: Marc Taylor
   age: 50
-  portrait: {fileID: 0}
-  characterSprite: {fileID: 0}
+  portrait: {fileID: 7588755623313940890, guid: ffcddc719b913d040abe0bf395037a2f, type: 3}
+  characterSprite: {fileID: 7588755623313940890, guid: ffcddc719b913d040abe0bf395037a2f, type: 3}
   severityLevel: 9
   diagnosis: "Hypothermie s\xE9v\xE8re"
   arrivalOrder: 1
