@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string mainMenuScene    = "MainMenu";
     [SerializeField] private string triageScene      = "TriageScene";
     [SerializeField] private string resultScene      = "ResultScene";
+    [SerializeField] private string collegueScene    = "CollegueScene";
     [SerializeField] private string endSessionScene  = "EndSession";
 
     // =========================================================
@@ -133,7 +134,10 @@ public class GameManager : MonoBehaviour
         CheckCriticalThresholds();
 
         // 7. Passer à l'écran de résultat
-        LoadResultScene();
+        if (chosePatientA)
+            LoadResultScene();
+        else
+            LoadCollegueScene();
         //ContinueToNextScenario(); 
     }
 
@@ -156,13 +160,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Appelé par CollegueSceneManager quand le joueur clique pour continuer.
+    /// Charge le scénario suivant dans la TriageScene.
+    /// </summary>
+    public void OnCollegueSceneComplete()
+    {
+        ContinueToNextScenario();
+    }
+
     // =========================================================
     // NAVIGATION ENTRE SCÈNES
     // =========================================================
 
-    public void LoadMainMenu()    => SceneManager.LoadScene(mainMenuScene);
-    public void LoadTriageScene() => SceneManager.LoadScene(triageScene);
-    public void LoadResultScene() => SceneManager.LoadScene(resultScene);
+    public void LoadMainMenu()      => SceneManager.LoadScene(mainMenuScene);
+    public void LoadTriageScene()   => SceneManager.LoadScene(triageScene);
+    public void LoadResultScene()   => SceneManager.LoadScene(resultScene);
+    public void LoadCollegueScene() => SceneManager.LoadScene(collegueScene);
 
     // =========================================================
     // VÉRIFICATION DES SEUILS CRITIQUES

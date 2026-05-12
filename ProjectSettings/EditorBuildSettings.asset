@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/_Triage/Scenes/TriageScene.unity
     guid: 396e6cb3f308ac908a34bd2f5831fc51
   - enabled: 1
+    path: Assets/_Triage/Scenes/CollegueScene.unity
+    guid: c821c47b6284b05468a4cb8eb24202de
+  - enabled: 1
     path: Assets/_Triage/Scenes/ResultScene.unity
     guid: d394b6244b002d36dac49f29b870475d
   - enabled: 1
