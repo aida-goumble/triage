@@ -136,6 +136,7 @@ public class GameManager : MonoBehaviour
         // 7. Passer à l'écran de résultat
         if (chosePatientA)
             LoadResultScene();
+            //ContinueToNextScenario();
         else
             LoadCollegueScene();
         //ContinueToNextScenario(); 
