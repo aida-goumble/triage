@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     [Header("Noms des scènes Unity")]
     [SerializeField] private string mainMenuScene    = "MainMenu";
     [SerializeField] private string triageScene      = "TriageScene";
-    [SerializeField] private string resultScene      = "ResultScene";
+    [SerializeField] private string penseeScene      = "PenseeScene";
     [SerializeField] private string collegueScene    = "CollegueScene";
     [SerializeField] private string endSessionScene  = "EndSession";
 
@@ -134,15 +134,16 @@ public class GameManager : MonoBehaviour
         CheckCriticalThresholds();
 
         // 7. Passer à l'écran de résultat
-        if (chosePatientA)
-            LoadResultScene();
-        else
+        Debug.Log(consequence.publicReputationDelta);
+        if (consequence.publicReputationDelta != 0)
             LoadCollegueScene();
+        else
+            LoadPenseeScene();
         //ContinueToNextScenario(); 
     }
 
     /// <summary>
-    /// Appelé depuis le bouton "Continuer" de la ResultScene.
+    /// Appelé depuis le bouton "Continuer" de la PenseeScene ou CollegueScene.
     /// Passe au scénario suivant, ou termine la session.
     /// </summary>
     public void ContinueToNextScenario()
@@ -175,7 +176,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadMainMenu()      => SceneManager.LoadScene(mainMenuScene);
     public void LoadTriageScene()   => SceneManager.LoadScene(triageScene);
-    public void LoadResultScene()   => SceneManager.LoadScene(resultScene);
+    public void LoadPenseeScene()   => SceneManager.LoadScene(penseeScene);
     public void LoadCollegueScene() => SceneManager.LoadScene(collegueScene);
 
     // =========================================================
