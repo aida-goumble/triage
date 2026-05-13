@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: Georges Petit
   age: 77
-  portrait: {fileID: 0}
-  characterSprite: {fileID: 0}
+  portrait: {fileID: -7177486571214027349, guid: ca602b5a3e32020458552e707b9fa083, type: 3}
+  characterSprite: {fileID: -7177486571214027349, guid: ca602b5a3e32020458552e707b9fa083, type: 3}
   severityLevel: 8
   diagnosis: "Rupture d'an\xE9vrisme"
   arrivalOrder: 2

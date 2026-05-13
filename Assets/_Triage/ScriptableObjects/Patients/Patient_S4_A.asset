@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: Yvette Collin
   age: 82
-  portrait: {fileID: 0}
-  characterSprite: {fileID: 0}
+  portrait: {fileID: -3392650274628463432, guid: 1e30e357b350fdc43ae7461009653882, type: 3}
+  characterSprite: {fileID: -3392650274628463432, guid: 1e30e357b350fdc43ae7461009653882, type: 3}
   severityLevel: 7
   diagnosis: "AVC isch\xE9mique"
   arrivalOrder: 1

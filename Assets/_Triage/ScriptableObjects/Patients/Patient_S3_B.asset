@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: Eric Blanc
   age: 44
-  portrait: {fileID: 0}
-  characterSprite: {fileID: 0}
+  portrait: {fileID: -3041777675157123695, guid: 6bd707fdee95ebb4b8f55be34ad9955d, type: 3}
+  characterSprite: {fileID: -3041777675157123695, guid: 6bd707fdee95ebb4b8f55be34ad9955d, type: 3}
   severityLevel: 6
   diagnosis: Fracture ouverte (accident moto)
   arrivalOrder: 2
