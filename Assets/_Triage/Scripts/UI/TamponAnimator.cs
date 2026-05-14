@@ -5,8 +5,11 @@ public class TamponAnimator : MonoBehaviour
 {
     public GameObject tamponApprouve;
     public GameObject tamponRefuse;
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip sonTampon;
 
-    public void JouerApprouve(System.Action callback)
+   public void JouerApprouve(System.Action callback)
     {
         StartCoroutine(AnimerTampon(tamponApprouve, callback));
     }
@@ -19,12 +22,15 @@ public class TamponAnimator : MonoBehaviour
     private IEnumerator AnimerTampon(GameObject tampon, System.Action callback)
     {
         tampon.SetActive(true);
+
+       
         RectTransform rt = tampon.GetComponent<RectTransform>();
         CanvasGroup cg = tampon.GetComponent<CanvasGroup>();
 
         // Ajoute CanvasGroup si absent
         if (cg == null) cg = tampon.AddComponent<CanvasGroup>();
-
+         if (audioSource && sonTampon)
+        {audioSource.PlayOneShot(sonTampon);}
         // État initial — grand et transparent
         rt.localScale = Vector3.one * 2f;
         cg.alpha = 0f;

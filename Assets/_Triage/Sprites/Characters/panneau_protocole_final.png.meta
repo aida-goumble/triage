@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4a930f96109e2f6049315ac1d91bc0bc
+guid: 9e7afdfdf9976abe7ac103000fe25bab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5361810000242971988
-    second: panneau_garde_equipe_0
+      213: -8596560772869404506
+    second: panneau_protocole_final_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: panneau_garde_equipe_0
+      name: panneau_protocole_final_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 23
-        width: 300
-        height: 377
+        x: 2
+        y: 42
+        width: 472
+        height: 590
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4559e9189c9f86a40800000000000000
-      internalID: 5361810000242971988
+      spriteID: 6a8cf0b0681e2b880800000000000000
+      internalID: -8596560772869404506
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      panneau_garde_equipe_0: 5361810000242971988
+      panneau_protocole_final_0: -8596560772869404506
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
