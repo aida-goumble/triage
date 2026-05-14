@@ -18,7 +18,7 @@ MonoBehaviour:
   characterSprite: {fileID: -3392650274628463432, guid: 1e30e357b350fdc43ae7461009653882, type: 3}
   severityLevel: 7
   diagnosis: "AVC isch\xE9mique"
-  arrivalOrder: 1
+  arrivalOrder: "1er arriv\xE9"
   needsOperatingRoom: 1
   surgeonsRequired: 1
   bedCost: 1
@@ -30,3 +30,6 @@ MonoBehaviour:
   hasPressure: 0
   pressureDescription: 
   pressureType: 0
+  frequenceCardiaque: 48
+  tension: 190/115
+  spo2: 92

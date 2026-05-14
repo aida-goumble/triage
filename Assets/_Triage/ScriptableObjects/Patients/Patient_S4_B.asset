@@ -18,7 +18,7 @@ MonoBehaviour:
   characterSprite: {fileID: -7177486571214027349, guid: ca602b5a3e32020458552e707b9fa083, type: 3}
   severityLevel: 8
   diagnosis: "Rupture d'an\xE9vrisme"
-  arrivalOrder: 2
+  arrivalOrder: "2\xE8me arriv\xE9"
   needsOperatingRoom: 1
   surgeonsRequired: 2
   bedCost: 1
@@ -30,3 +30,6 @@ MonoBehaviour:
   hasPressure: 0
   pressureDescription: 
   pressureType: 0
+  frequenceCardiaque: 52
+  tension: 185/110
+  spo2: 93

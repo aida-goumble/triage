@@ -38,6 +38,10 @@ public class PatientPanelUI : MonoBehaviour
     [Header("Ce panneau est-il le Patient A ou B ?")]
     [SerializeField] private bool isPatientA = true;
 
+    [Header("Constantes vitales")]
+    [SerializeField] private TextMeshProUGUI fcText;
+    [SerializeField] private TextMeshProUGUI tensionText;
+    [SerializeField] private TextMeshProUGUI spo2Text;
     // =========================================================
     // COULEURS DE GRAVITÉ
     // =========================================================
@@ -171,6 +175,25 @@ public void DisplayPatient(PatientData patient)
                 : new Color(0.77f, 0.35f, 0.16f);
         }
     }
+    // --- Constantes vitales ---
+if (fcText)
+{
+    fcText.text = patient.frequenceCardiaque + " BPM";
+    fcText.color = patient.frequenceCardiaque <= 50
+        ? new Color(0.77f, 0.35f, 0.16f)   // orange critique
+        : new Color(0.42f, 0.77f, 0.42f);  // vert normal
+}
+
+if (tensionText)
+    tensionText.text = patient.tension;
+
+if (spo2Text)
+{
+    spo2Text.text = patient.spo2 + "%";
+    spo2Text.color = patient.spo2 <= 94
+        ? new Color(0.77f, 0.67f, 0.12f)   // ambre
+        : new Color(0.42f, 0.77f, 0.42f);  // vert
+}
 }
     // =========================================================
     // UTILITAIRES

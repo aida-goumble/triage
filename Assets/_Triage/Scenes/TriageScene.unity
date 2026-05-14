@@ -1805,6 +1805,9 @@ MonoBehaviour:
   pressurePanel: {fileID: 0}
   choiceButton: {fileID: 0}
   isPatientA: 1
+  fcText: {fileID: 1809210236}
+  tensionText: {fileID: 1150065145}
+  spo2Text: {fileID: 439994961}
   lowSeverityColor: {r: 0.2, g: 0.8, b: 0.2, a: 1}
   medSeverityColor: {r: 1, g: 0.6, b: 0, a: 1}
   highSeverityColor: {r: 0.9, g: 0.1, b: 0.1, a: 1}
@@ -7500,7 +7503,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7516068d43144e147990c58e42545db3, type: 2}
   mainMenuScene: MainMenu
   triageScene: TriageScene
-  resultScene: ResultScene
+  penseeScene: PenseeScene
   collegueScene: CollegueScene
   endSessionScene: EndSession
 --- !u!4 &1537698083
@@ -9062,7 +9065,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fermer
+  m_text: ' X '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -29,3 +29,6 @@ MonoBehaviour:
   hasPressure: 0
   pressureDescription: 
   pressureType: 0
+  frequenceCardiaque: 28
+  tension: 70/40
+  spo2: 88

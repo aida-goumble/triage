@@ -39,6 +39,11 @@ public class PatientData : ScriptableObject
     [TextArea(2, 4)]
     public string pressureDescription; // Ex : "Menace de plainte, contact avec la direction"
     public PressureType pressureType;
+
+    [Header("Constantes vitales")]
+    public int frequenceCardiaque;    // ex: 42 ou 78
+    public string tension;            // ex: "82/44" ou "128/82"
+    public int spo2;                  // ex: 91 ou 98
 }
 
 public enum PressureType

@@ -18,7 +18,7 @@ MonoBehaviour:
   characterSprite: {fileID: 7588755623313940890, guid: ffcddc719b913d040abe0bf395037a2f, type: 3}
   severityLevel: 9
   diagnosis: "Hypothermie s\xE9v\xE8re"
-  arrivalOrder: 1
+  arrivalOrder: "1er arriv\xE9"
   needsOperatingRoom: 0
   surgeonsRequired: 0
   bedCost: 1
@@ -30,3 +30,6 @@ MonoBehaviour:
   hasPressure: 0
   pressureDescription: 
   pressureType: 0
+  frequenceCardiaque: 38
+  tension: 80/50
+  spo2: 89

@@ -18,7 +18,7 @@ MonoBehaviour:
   characterSprite: {fileID: -3041777675157123695, guid: 6bd707fdee95ebb4b8f55be34ad9955d, type: 3}
   severityLevel: 6
   diagnosis: Fracture ouverte (accident moto)
-  arrivalOrder: 2
+  arrivalOrder: "2eme arriv\xE9e"
   needsOperatingRoom: 1
   surgeonsRequired: 1
   bedCost: 1
@@ -31,3 +31,6 @@ MonoBehaviour:
   pressureDescription: "L'infirmi\xE8re senior insiste : \"le sans-abri prend une
     place pour rien\"."
   pressureType: 5
+  frequenceCardiaque: 88
+  tension: 135/85
+  spo2: 97
