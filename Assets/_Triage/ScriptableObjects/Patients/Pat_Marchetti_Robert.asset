@@ -15,6 +15,7 @@ MonoBehaviour:
   patientName: Robert Marchetti
   age: 54
   portrait: {fileID: 5698975764937621995, guid: 2425a2591e7c78d2f8f6f45945a781e7, type: 3}
+  characterSprite: {fileID: 0}
   severityLevel: 2
   diagnosis: Douleurs thoraciques non critiques
   arrivalOrder: "2e arriv\xE9"
@@ -28,3 +29,6 @@ MonoBehaviour:
   hasPressure: 1
   pressureDescription: "Menace de plainte, contact avec la direction, m\xE9dias locaux"
   pressureType: 1
+  frequenceCardiaque: 78
+  tension: 128/82
+  spo2: 98

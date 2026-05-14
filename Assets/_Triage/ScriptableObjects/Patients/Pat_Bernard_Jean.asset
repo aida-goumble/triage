@@ -15,6 +15,7 @@ MonoBehaviour:
   patientName: Jean Bernard
   age: 79
   portrait: {fileID: -227110053616664721, guid: 08fcf0704923181b385ca5e6983f02ce, type: 3}
+  characterSprite: {fileID: 0}
   severityLevel: 9
   diagnosis: Urgence vitale
   arrivalOrder: "1er arriv\xE9"
@@ -28,3 +29,6 @@ MonoBehaviour:
   hasPressure: 0
   pressureDescription: 
   pressureType: 0
+  frequenceCardiaque: 42
+  tension: 82/44
+  spo2: 91
