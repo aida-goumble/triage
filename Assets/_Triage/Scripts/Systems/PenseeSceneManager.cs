@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PenseeSceneManager : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class PenseeSceneManager : MonoBehaviour
     [SerializeField] private CanvasGroup guillemetsOuvrant;  // guillemets_0
     [SerializeField] private CanvasGroup guillemetsOuvrant1; // guillemets_1
     [SerializeField] private CanvasGroup textePensee;        // TextePensee
+    [Header("Typewriter")]
+    [SerializeField] private TMP_Text texteTypewriter;   // le composant TMP dans textePensee
+    [SerializeField] private float vitesseTypewriter = 0.04f;
     [SerializeField] private CanvasGroup nomScenario;        // Nom_scenario
 
     [Header("Timing")]
@@ -50,7 +54,7 @@ public class PenseeSceneManager : MonoBehaviour
         yield return new WaitForSeconds(delaiApresGuillemets);
 
         // Étape 2 — Texte de la pensée
-        yield return StartCoroutine(FadeIn(textePensee, dureeFadeIn * 1.5f));
+        yield return StartCoroutine(TypewriterEffect(texteTypewriter, vitesseTypewriter));
 
         yield return new WaitForSeconds(delaiApresTexte);
 
@@ -75,6 +79,20 @@ public class PenseeSceneManager : MonoBehaviour
             GameManager.Instance.OnCollegueSceneComplete();
         else
             UnityEngine.SceneManagement.SceneManager.LoadScene("TriageScene");
+    }
+
+    private IEnumerator TypewriterEffect(TMP_Text tmp, float vitesse)
+    {
+        tmp.maxVisibleCharacters = 0;
+        textePensee.alpha = 1f; // rendre le CanvasGroup visible d'emblée
+
+        int total = tmp.textInfo.characterCount;
+
+        for (int i = 0; i <= total; i++)
+        {
+            tmp.maxVisibleCharacters = i;
+            yield return new WaitForSeconds(vitesse);
+        }
     }
 
     private IEnumerator FadeIn(CanvasGroup cg, float duree)

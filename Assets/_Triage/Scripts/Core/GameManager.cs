@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour
         CheckCriticalThresholds();
 
         // 7. Passer à l'écran de résultat
-        if (consequence.publicReputationDelta != 0)
+        if (consequence.publicReputationDelta < 0)
             LoadCollegueScene();
         else
             LoadPenseeScene();

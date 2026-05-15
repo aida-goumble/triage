@@ -1814,6 +1814,8 @@ MonoBehaviour:
   guillemetsOuvrant: {fileID: 967614685}
   guillemetsOuvrant1: {fileID: 602971069}
   textePensee: {fileID: 760232624}
+  texteTypewriter: {fileID: 760232622}
+  vitesseTypewriter: 0.04
   nomScenario: {fileID: 1106365278}
   dureeFadeIn: 1
   delaiApresGuillemets: 0.8
