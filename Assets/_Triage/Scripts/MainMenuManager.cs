@@ -33,7 +33,7 @@ public class MainMenuManager : MonoBehaviour
         // Change le texte du bouton selon si une save existe
         if (btnJouerText != null)
             btnJouerText.text = hasSave
-                ? "02  CONTINUER"
+                ? "01  CONTINUER"
                 : "01  NOUVELLE PARTIE";
 
         // Change le tampon
@@ -58,9 +58,29 @@ public class MainMenuManager : MonoBehaviour
 
     void OnJouer()
     {
-        PlayerPrefs.SetInt(SAVE_KEY, 1);
-        PlayerPrefs.Save();
-        SceneManager.LoadScene(sceneTriageScene);
+        bool hasSave = PlayerPrefs.HasKey(SAVE_KEY);
+
+        if (!hasSave)
+        {
+            // Nouvelle partie — tout réinitialiser
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.Save();
+
+            // Réinitialise le GameManager si présent
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.StartSession();
+                // StartSession charge TriageScene, on veut Intro d'abord
+                // donc on stop et on charge Intro manuellement
+            }
+
+            SceneManager.LoadScene("IntroScene");
+        }
+        else
+        {
+            // Continuer — reprendre où on en était
+            SceneManager.LoadScene(sceneTriageScene);
+        }
     }
 
     void OnQuitter()

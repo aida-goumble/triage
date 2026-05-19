@@ -16,6 +16,10 @@ public class EndBalanceScene : MonoBehaviour
     public float pauseEntreActes = 2f;
     public float pauseFinale     = 5f;
     public float fadeOutDuration = 3f;
+    
+    [Header("Son clavier")]
+    public AudioSource audioSource;
+    public AudioClip   keySound;
 
     [Header("Couleurs")]
     public Color colorNarration  = new Color(0.82f, 0.78f, 0.60f); // beige normal
@@ -118,6 +122,13 @@ public class EndBalanceScene : MonoBehaviour
         foreach (char c in texte)
         {
             acteText.text += c;
+
+            if (c != ' ' && c != '\n')
+            {
+                audioSource.pitch = Random.Range(0.9f, 1.1f);
+                audioSource.PlayOneShot(keySound, 0.4f);
+            }
+
             if (c == '.' || c == '!')
                 yield return new WaitForSeconds(charDelay * 8f);
             else if (c == ',')

@@ -15,7 +15,11 @@ public class BurnoutScene : MonoBehaviour
     public float charDelay         = 0.045f;
     public float pauseAfterLetter  = 3f;
     public float fadeOutDuration   = 3f;
-
+    
+    [Header("Son clavier")]
+    public AudioSource audioSource;
+    public AudioClip   keySound;
+    
     [Header("Scène suivante")]
     public string nextScene = "MainMenu";
 
@@ -52,7 +56,6 @@ public class BurnoutScene : MonoBehaviour
         // 5. Scène suivante
         SceneManager.LoadScene(nextScene);
     }
-
     IEnumerator Typewriter()
     {
         letterText.text = "";
@@ -60,7 +63,12 @@ public class BurnoutScene : MonoBehaviour
         {
             letterText.text += c;
 
-            // Pause plus longue sur la ponctuation
+            if (c != ' ' && c != '\n')
+            {
+                audioSource.pitch = Random.Range(0.9f, 1.1f);
+                audioSource.PlayOneShot(keySound, 0.4f);
+            }
+
             if (c == '.' || c == ',') 
                 yield return new WaitForSeconds(charDelay * 6f);
             else if (c == '\n')       

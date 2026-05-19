@@ -16,6 +16,10 @@ public class EndSystemScene : MonoBehaviour
     public float pauseEntreActes = 2f;
     public float pauseFinale     = 5f;
     public float fadeOutDuration = 3f;
+    
+    [Header("Son clavier")]
+    public AudioSource audioSource;
+    public AudioClip   keySound;
 
     [Header("Couleurs")]
     public Color colorEloge    = new Color(0.90f, 0.85f, 0.65f); // beige clair festif
@@ -82,6 +86,13 @@ public class EndSystemScene : MonoBehaviour
         foreach (char c in texte)
         {
             acteText.text += c;
+
+            if (c != ' ' && c != '\n')
+            {
+                audioSource.pitch = Random.Range(0.9f, 1.1f);
+                audioSource.PlayOneShot(keySound, 0.4f);
+            }
+
             if (c == '.' || c == '!')
                 yield return new WaitForSeconds(delay * 8f);
             else if (c == ',')

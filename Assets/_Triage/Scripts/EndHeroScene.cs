@@ -16,6 +16,10 @@ public class EndHeroScene : MonoBehaviour
     public float pauseEntreActes  = 2f;
     public float pauseFinale      = 4f;
     public float fadeOutDuration  = 3f;
+    
+    [Header("Son clavier")]
+    public AudioSource audioSource;
+    public AudioClip   keySound;
 
     [Header("Scène suivante")]
     public string nextScene = "MainMenu";
@@ -84,6 +88,13 @@ public class EndHeroScene : MonoBehaviour
         foreach (char c in texte)
         {
             acteText.text += c;
+
+            if (c != ' ' && c != '\n')
+            {
+                audioSource.pitch = Random.Range(0.9f, 1.1f);
+                audioSource.PlayOneShot(keySound, 0.4f);
+            }
+
             if (c == '.' || c == '!')
                 yield return new WaitForSeconds(charDelay * 8f);
             else if (c == ',')
