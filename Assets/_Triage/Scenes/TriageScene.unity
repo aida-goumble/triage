@@ -7501,6 +7501,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6ceeecedb7f3970cc9cbceb34e8ead4a, type: 2}
   - {fileID: 11400000, guid: c15d7f344c11324468edfa9ab5fdd37e, type: 2}
   - {fileID: 11400000, guid: 7516068d43144e147990c58e42545db3, type: 2}
+  penseeSceneDatas:
+  - {fileID: 11400000, guid: de484fdfb3b8b0045825eba9b1487d65, type: 2}
+  - {fileID: 11400000, guid: f2c1b5ed949906b49b0dd317d4355311, type: 2}
+  - {fileID: 11400000, guid: b07bb50279c1ff9479e088c23a01540d, type: 2}
+  - {fileID: 11400000, guid: 8228a80ef9249c74788622491d4f1af0, type: 2}
+  collegueSceneDatas:
+  - {fileID: 11400000, guid: dcca28da1f645f349a69706dad564f86, type: 2}
+  - {fileID: 11400000, guid: 1607b982488fa6246a3e2b7a3c617bcf, type: 2}
+  - {fileID: 11400000, guid: a330996ff12bb134d800caac8f2e8db1, type: 2}
+  - {fileID: 11400000, guid: 244ede4e77e92c14dbe872de8f495532, type: 2}
   mainMenuScene: MainMenu
   triageScene: TriageScene
   penseeScene: PenseeScene
