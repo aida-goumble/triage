@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5739dd21f82fa336ca50d580dc8029ef, type: 3}
+  m_Name: Consequence_S8_B
+  m_EditorClassIdentifier: Assembly-CSharp::ConsequenceData
+  immediateText: "Claire re\xE7oit le greffon. Compatibilit\xE9 partielle. L'op\xE9ration
+    est risqu\xE9e mais elle survit."
+  laterText: "Hassan perd sa fen\xEAtre. Aucun autre greffon n'arrive \xE0 temps.
+    Il d\xE9c\xE8de. Le comit\xE9 \xE9thique est saisi. Votre d\xE9cision sera examin\xE9e
+    pendant des mois."
+  medicalScoreDelta: 0
+  teamTrustDelta: 0
+  publicReputationDelta: -25
+  budgetBalanceDelta: 0
+  moralScoreDelta: -10
+  triggersInternalInquiry: 0
+  triggersStrike: 0
+  triggersMediaCoverage: 0
+  triggersLegalAction: 0
+  triggersServiceClosure: 0
+  tone: 1
+  resultScreenColor: {r: 0, g: 0, b: 0, a: 0}

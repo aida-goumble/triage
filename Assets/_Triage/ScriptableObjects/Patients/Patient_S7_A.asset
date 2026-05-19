@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a653966e3e14f59a9bfd92a70d1b4e, type: 3}
+  m_Name: Patient_S7_A
+  m_EditorClassIdentifier: Assembly-CSharp::PatientData
+  patientName: Philippe Cazal
+  age: 61
+  portrait: {fileID: 0}
+  characterSprite: {fileID: 0}
+  severityLevel: 3
+  diagnosis: "Douleurs thoraciques non confirm\xE9es"
+  arrivalOrder: "2\xE8me arriv\xE9"
+  needsOperatingRoom: 0
+  surgeonsRequired: 0
+  bedCost: 0
+  budgetCost: 0
+  needsRareMedication: 0
+  survivalChance: 95
+  backgroundContext: "Avocat r\xE9put\xE9. Lettre d'intimidation remise \xE0 l'accueil
+    avant m\xEAme l'examen. A contact\xE9 la direction directement."
+  hasPressure: 1
+  pressureDescription: "Une lettre d'avocat attend \xE0 l'accueil. La direction vous
+    a appel\xE9. \"Traitez-le en priorit\xE9.\""
+  pressureType: 3
+  frequenceCardiaque: 88
+  tension: 140/90
+  spo2: 97

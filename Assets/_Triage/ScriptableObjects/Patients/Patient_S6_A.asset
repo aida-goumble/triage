@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a653966e3e14f59a9bfd92a70d1b4e, type: 3}
+  m_Name: Patient_S6_A
+  m_EditorClassIdentifier: Assembly-CSharp::PatientData
+  patientName: "B\xE9b\xE9 Moreau"
+  age: 0
+  portrait: {fileID: 0}
+  characterSprite: {fileID: 0}
+  severityLevel: 9
+  diagnosis: "Grand pr\xE9matur\xE9 en d\xE9tresse \u2014 26 semaines"
+  arrivalOrder: "1er arriv\xE9"
+  needsOperatingRoom: 0
+  surgeonsRequired: 0
+  bedCost: 0
+  budgetCost: 0
+  needsRareMedication: 0
+  survivalChance: 25
+  backgroundContext: "26 semaines. R\xE9animation n\xE9onatale compl\xE8te n\xE9cessaire.
+    S\xE9quelles probables m\xEAme en cas de survie. Parents d\xE9vast\xE9s pr\xE9sents
+    dans le couloir."
+  hasPressure: 0
+  pressureDescription: 
+  pressureType: 0
+  frequenceCardiaque: 180
+  tension: 40/20
+  spo2: 72

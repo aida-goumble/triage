@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5739dd21f82fa336ca50d580dc8029ef, type: 3}
+  m_Name: Consequence_S5_B
+  m_EditorClassIdentifier: Assembly-CSharp::ConsequenceData
+  immediateText: "Fatima est op\xE9r\xE9e en urgence. La p\xE9ritonite est contenue.
+    Elle survivra."
+  laterText: "Le Dr. Auriac quitte la salle sans un mot. Son soutien est retir\xE9.
+    Dans le couloir, trois infirmi\xE8res vous regardent diff\xE9remment. Avec respect."
+  medicalScoreDelta: 0
+  teamTrustDelta: 0
+  publicReputationDelta: -10
+  budgetBalanceDelta: 0
+  moralScoreDelta: 30
+  triggersInternalInquiry: 0
+  triggersStrike: 0
+  triggersMediaCoverage: 0
+  triggersLegalAction: 0
+  triggersServiceClosure: 0
+  tone: 2
+  resultScreenColor: {r: 0, g: 0, b: 0, a: 0}
