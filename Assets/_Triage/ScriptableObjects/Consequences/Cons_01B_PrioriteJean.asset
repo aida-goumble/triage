@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Cons_01B_PrioriteJean
   m_EditorClassIdentifier: Assembly-CSharp::ConsequenceData
   immediateText: "Jean Bernard est sauv\xE9. Le maire attend, furieux."
-  laterText: "Le maire porte plainte. Budget impact\xE9, presse hostile. Mais l'\xE9quipe
-    m\xE9dicale vous soutient."
+  laterText: "Le maire porte plainte et la presse est hostile. Mais l'\xE9quipe m\xE9dicale
+    vous soutient."
   medicalScoreDelta: 15
   teamTrustDelta: 10
   publicReputationDelta: -10
   budgetBalanceDelta: -10
+  moralScoreDelta: 0
   triggersInternalInquiry: 0
   triggersStrike: 0
   triggersMediaCoverage: 1

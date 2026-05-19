@@ -88,11 +88,12 @@ public class PatientPanelUI : MonoBehaviour
             return;
         }
 
-        DisplayPatient(patient);
+        DisplayPatient(patient, isPatientA);
     }
 
-    //private void DisplayPatient(PatientData patient)
-public void DisplayPatient(PatientData patient)
+public void DisplayPatient(PatientData patient) => DisplayPatient(patient, isPatientA);
+
+public void DisplayPatient(PatientData patient, bool isA)
 {
     // --- Textes de base ---
     if (nameText)         nameText.text         = patient.patientName;
@@ -153,7 +154,7 @@ public void DisplayPatient(PatientData patient)
     if (GameManager.Instance != null)
     {
         ScenarioData scenario = GameManager.Instance.CurrentScenario;
-        ConsequenceData consequence = isPatientA
+        ConsequenceData consequence = isA
             ? scenario.consequenceIfA
             : scenario.consequenceIfB;
 

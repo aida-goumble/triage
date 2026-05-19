@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
             ? GameManager.Instance.CurrentScenario.patientA
             : GameManager.Instance.CurrentScenario.patientB;
 
-        dossierPanel.GetComponent<PatientPanelUI>().DisplayPatient(data);
+        dossierPanel.GetComponent<PatientPanelUI>().DisplayPatient(data, estA);
     }
 
     public void FermerDossier()

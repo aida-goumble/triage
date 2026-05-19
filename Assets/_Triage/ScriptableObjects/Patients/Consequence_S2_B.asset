@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5739dd21f82fa336ca50d580dc8029ef, type: 3}
   m_Name: Consequence_S2_B
   m_EditorClassIdentifier: Assembly-CSharp::ConsequenceData
-  immediateText: "Vous priorisez Martin. Il survit. L'enfant d\xE9c\xE8de faute de
-    soins. L'opinion publique s'embrase."
+  immediateText: "Vous priorisez Martin et il survit \xE0 l'op\xE9ration. L'enfant
+    d\xE9c\xE8de faute de soins, l'opinion publique s'embrase."
   laterText: 
   medicalScoreDelta: 0
   teamTrustDelta: 0

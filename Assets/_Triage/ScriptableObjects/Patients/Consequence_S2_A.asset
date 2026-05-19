@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5739dd21f82fa336ca50d580dc8029ef, type: 3}
   m_Name: Consequence_S2_A
   m_EditorClassIdentifier: Assembly-CSharp::ConsequenceData
-  immediateText: "Vous priorisez l'enfant. L'op\xE9ration est un succ\xE8s. Martin
-    d\xE9c\xE8de en salle d'attente. Sa famille vous tiendra responsable."
+  immediateText: "Vous priorisez l'enfant. L'op\xE9ration est un succ\xE8s. Cependant
+    Martin d\xE9c\xE8de en salle d'attente. Sa famille vous tiendra responsable."
   laterText: 
   medicalScoreDelta: 0
   teamTrustDelta: 0

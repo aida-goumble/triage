@@ -2,11 +2,15 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class CollegueSceneManager : MonoBehaviour
 {
     [Header("Bulles de dialogue (dans l'ordre d'apparition)")]
     [SerializeField] private CanvasGroup[] bulles;
+
+    [Header("Données de la scène (fallback si pas de GameManager)")]
+    [SerializeField] private CollegueSceneData sceneData;
 
     [Header("UI Continue")]
     [SerializeField] private CanvasGroup texteContinuer; // ton objet texte "Cliquer pour continuer"
@@ -16,10 +20,31 @@ public class CollegueSceneManager : MonoBehaviour
     [SerializeField] private float dureeFadeIn = 0.4f;
     [SerializeField] private float delaiAvantContinuer = 2f; // attente après dernière bulle
 
+    [Header("Conséquence du choix")]
+    [SerializeField] private CanvasGroup consequence;
+    [SerializeField] private TMP_Text texteConsequence;
+
     private bool _peutContinuer = false;
 
     void Start()
     {
+        sceneData = GameManager.Instance?.CurrentCollegueSceneData ?? sceneData;
+
+        // Injecter les textes depuis le ScriptableObject
+        for (int i = 0; i < bulles.Length; i++)
+        {
+            if (sceneData == null || i >= sceneData.dialogues.Length) break;
+
+            var dialogue = sceneData.dialogues[i];
+
+            // Cherche les deux TMP enfants par nom
+            var nom   = bulles[i].transform.Find("NomPersonnage")?.GetComponent<TMP_Text>();
+            var texte = bulles[i].transform.Find("TexteDialogue")?.GetComponent<TMP_Text>();
+
+            if (nom   != null) nom.text   = dialogue.nomPersonnage;
+            if (texte != null) texte.text = dialogue.texte;
+        }
+
         foreach (var b in bulles)
         {
             b.alpha = 0f;
@@ -29,6 +54,13 @@ public class CollegueSceneManager : MonoBehaviour
         // Cacher le texte continuer au départ
         texteContinuer.alpha = 0f;
         texteContinuer.gameObject.SetActive(true);
+        consequence.alpha        = 0f;
+
+        if (texteConsequence != null && GameManager.Instance?.LastConsequence != null)
+        {
+            texteConsequence.text = GameManager.Instance.LastConsequence.immediateText + "\n" + GameManager.Instance.LastConsequence.laterText;
+            texteConsequence.maxVisibleCharacters = 0;
+        }
 
         StartCoroutine(JouerSequence());
     }
@@ -69,6 +101,12 @@ public class CollegueSceneManager : MonoBehaviour
         // Fade out du texte avant de partir
         yield return StartCoroutine(FadeOut(texteContinuer, 0.3f));
 
+        yield return new WaitForSeconds(0.5f);
+        yield return StartCoroutine(FadeIn(consequence, dureeFadeIn));
+        yield return new WaitForSeconds(0.6f);
+        yield return StartCoroutine(TypewriterEffect(texteConsequence, 0.05f));
+        yield return new WaitForSeconds(delaiAvantContinuer);
+
         if (GameManager.Instance != null)
         {
             GameManager.Instance.OnCollegueSceneComplete();
@@ -77,6 +115,20 @@ public class CollegueSceneManager : MonoBehaviour
         {
             // Fallback pour tester la scène en isolation
             UnityEngine.SceneManagement.SceneManager.LoadScene("TriageScene");
+        }
+    }
+
+    private IEnumerator TypewriterEffect(TMP_Text tmp, float vitesse)
+    {
+        tmp.maxVisibleCharacters = 0;
+        consequence.alpha = 1f; // rendre le CanvasGroup visible d'emblée
+
+        int total = tmp.textInfo.characterCount;
+
+        for (int i = 0; i <= total; i++)
+        {
+            tmp.maxVisibleCharacters = i;
+            yield return new WaitForSeconds(vitesse);
         }
     }
 

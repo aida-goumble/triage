@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f92409bfe5f034fbd0cff76f0a57aa, type: 3}
+  m_Name: CollegueScene_01
+  m_EditorClassIdentifier: Assembly-CSharp::CollegueSceneData
+  nomScenario: "\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\u2014
+    SC\xC9NARIO 01 \xB7 LE MAIRE ET LE VIEUX MONSIEUR"
+  dialogues:
+  - nomPersonnage: "SOPHIE M. \u2014 INFIRMI\xC8RE"
+    texte: "T'as vu ce qu'il a fait ? Il a ignor\xE9 le maire..."
+    personnageIndex: 0
+  - nomPersonnage: "DR. MARTIN \u2014 CHEF ADJOINT"
+    texte: "Moi je dis qu'il a eu raison. Le vieux \xE9tait critique."
+    personnageIndex: 2
+  - nomPersonnage: "KARIM B. \u2014 AIDE-SOIGNANT"
+    texte: "J'imagine... mais \xE7a va nous retomber dessus."
+    personnageIndex: 1

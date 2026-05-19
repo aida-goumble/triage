@@ -55,6 +55,10 @@ public class GameManager : MonoBehaviour
     [Header("Liste des scénarios dans l'ordre de jeu")]
     [SerializeField] private ScenarioData[] scenarios;
 
+    [Header("Données des scènes de transition (même ordre que les scénarios)")]
+    [SerializeField] private PenseeSceneData[]   penseeSceneDatas;
+    [SerializeField] private CollegueSceneData[] collegueSceneDatas;
+
     [Header("Noms des scènes Unity")]
     [SerializeField] private string mainMenuScene    = "MainMenu";
     [SerializeField] private string triageScene      = "TriageScene";
@@ -77,6 +81,19 @@ public class GameManager : MonoBehaviour
 
     /// <summary>True si tous les scénarios ont été joués.</summary>
     public bool IsSessionOver => CurrentScenarioIndex >= scenarios.Length;
+
+    /// <summary>Les données PenseeScene pour le scénario en cours. Null si non renseigné.</summary>
+    public PenseeSceneData CurrentPenseeSceneData =>
+        (penseeSceneDatas != null && CurrentScenarioIndex < penseeSceneDatas.Length)
+            ? penseeSceneDatas[CurrentScenarioIndex] : null;
+
+    /// <summary>Les données CollegueScene pour le scénario en cours. Null si non renseigné.</summary>
+    public CollegueSceneData CurrentCollegueSceneData =>
+        (collegueSceneDatas != null && CurrentScenarioIndex < collegueSceneDatas.Length)
+            ? collegueSceneDatas[CurrentScenarioIndex] : null;
+
+    /// <summary>La conséquence appliquée lors du dernier MakeChoice. Disponible dans PenseeScene / CollegueScene.</summary>
+    public ConsequenceData LastConsequence { get; private set; }
 
     // =========================================================
     // DÉMARRAGE DE SESSION
@@ -113,6 +130,8 @@ public class GameManager : MonoBehaviour
         ConsequenceData consequence = chosePatientA
             ? scenario.consequenceIfA
             : scenario.consequenceIfB;
+
+        LastConsequence = consequence;
 
         // 2. Consommer les ressources du patient traité
         PatientData treatedPatient = chosePatientA ? scenario.patientA : scenario.patientB;

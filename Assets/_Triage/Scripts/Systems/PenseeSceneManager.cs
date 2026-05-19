@@ -8,6 +8,8 @@ public class PenseeSceneManager : MonoBehaviour
     [Header("Éléments dans l'ordre d'apparition")]
     [SerializeField] private CanvasGroup guillemetsOuvrant;  // guillemets_0
     [SerializeField] private CanvasGroup guillemetsOuvrant1; // guillemets_1
+    [Header("Données de la scène (fallback si pas de GameManager)")]
+    [SerializeField] private PenseeSceneData sceneData;
     [SerializeField] private CanvasGroup textePensee;        // TextePensee
     [Header("Typewriter")]
     [SerializeField] private TMP_Text texteTypewriter;   // le composant TMP dans textePensee
@@ -23,16 +25,35 @@ public class PenseeSceneManager : MonoBehaviour
     [Header("UI Continue")]
     [SerializeField] private CanvasGroup texteContinuer;
 
+    [Header("Conséquence du choix")]
+    [SerializeField] private CanvasGroup consequence;
+    [SerializeField] private TMP_Text texteConsequence;
+
     private bool _peutContinuer = false;
 
     void Start()
     {
+        sceneData = GameManager.Instance?.CurrentPenseeSceneData ?? sceneData;
+
         // Tout cacher au départ
         guillemetsOuvrant.alpha  = 0f;
         guillemetsOuvrant1.alpha = 0f;
         textePensee.alpha        = 0f;
         nomScenario.alpha        = 0f;
         texteContinuer.alpha     = 0f;
+        consequence.alpha        = 0f;
+
+        var tmp = textePensee.GetComponent<TMPro.TMP_Text>();
+        if (tmp != null) tmp.text = sceneData.textePensee;
+
+        var tmpNom = nomScenario.GetComponent<TMPro.TMP_Text>();
+        if (tmpNom != null) tmpNom.text = sceneData.nomScenario;
+
+        if (texteConsequence != null && GameManager.Instance?.LastConsequence != null)
+        {
+            texteConsequence.text = GameManager.Instance.LastConsequence.immediateText + "\n" + GameManager.Instance.LastConsequence.laterText;
+            texteConsequence.maxVisibleCharacters = 0;
+        }
 
         StartCoroutine(JouerSequence());
     }
@@ -58,11 +79,6 @@ public class PenseeSceneManager : MonoBehaviour
 
         yield return new WaitForSeconds(delaiApresTexte);
 
-        // Étape 3 — Nom du scénario
-        yield return StartCoroutine(FadeIn(nomScenario, dureeFadeIn));
-
-        yield return new WaitForSeconds(delaiAvantContinuer);
-
         // Étape 4 — "Cliquer pour continuer"
         yield return StartCoroutine(FadeIn(texteContinuer, 0.6f));
 
@@ -75,6 +91,13 @@ public class PenseeSceneManager : MonoBehaviour
 
         yield return StartCoroutine(FadeOut(texteContinuer, 0.3f));
 
+        yield return new WaitForSeconds(0.5f);
+        yield return StartCoroutine(FadeIn(consequence, dureeFadeIn));
+        yield return new WaitForSeconds(0.6f);
+        yield return StartCoroutine(TypewriterEffect(texteConsequence, 0.05f));
+        yield return new WaitForSeconds(0.5f);
+        yield return StartCoroutine(FadeIn(nomScenario, 0.3f));
+        yield return new WaitForSeconds(delaiAvantContinuer);
         if (GameManager.Instance != null)
             GameManager.Instance.OnCollegueSceneComplete();
         else
