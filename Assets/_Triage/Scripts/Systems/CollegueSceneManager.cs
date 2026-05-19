@@ -20,6 +20,9 @@ public class CollegueSceneManager : MonoBehaviour
     [SerializeField] private float dureeFadeIn = 0.4f;
     [SerializeField] private float delaiAvantContinuer = 2f; // attente après dernière bulle
 
+    [Header("Nom du scénario")]
+    [SerializeField] private CanvasGroup nomScenario;
+
     [Header("Conséquence du choix")]
     [SerializeField] private CanvasGroup consequence;
     [SerializeField] private TMP_Text texteConsequence;
@@ -54,7 +57,11 @@ public class CollegueSceneManager : MonoBehaviour
         // Cacher le texte continuer au départ
         texteContinuer.alpha = 0f;
         texteContinuer.gameObject.SetActive(true);
-        consequence.alpha        = 0f;
+        consequence.alpha = 0f;
+        nomScenario.alpha = 0f;
+
+        var tmpNom = nomScenario.GetComponent<TMPro.TMP_Text>();
+        if (tmpNom != null) tmpNom.text = sceneData.nomScenario;
 
         if (texteConsequence != null && GameManager.Instance?.LastConsequence != null)
         {
@@ -105,6 +112,8 @@ public class CollegueSceneManager : MonoBehaviour
         yield return StartCoroutine(FadeIn(consequence, dureeFadeIn));
         yield return new WaitForSeconds(0.6f);
         yield return StartCoroutine(TypewriterEffect(texteConsequence, 0.05f));
+        yield return new WaitForSeconds(0.5f);
+        yield return StartCoroutine(FadeIn(nomScenario, 0.3f));
         yield return new WaitForSeconds(delaiAvantContinuer);
 
         if (GameManager.Instance != null)
