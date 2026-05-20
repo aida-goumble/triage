@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: Claire Brun
   age: 17
-  portrait: {fileID: 0}
-  characterSprite: {fileID: 0}
+  portrait: {fileID: 2909766816615320302, guid: 38f8b3c2e356853c8a2e22458fc01141, type: 3}
+  characterSprite: {fileID: 2909766816615320302, guid: 38f8b3c2e356853c8a2e22458fc01141, type: 3}
   severityLevel: 10
   diagnosis: "Cardiomyopathie terminale \u2014 urgence imm\xE9diate"
   arrivalOrder: "2\xE8me arriv\xE9"

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: Fatima Osei
   age: 34
-  portrait: {fileID: 0}
-  characterSprite: {fileID: 0}
+  portrait: {fileID: -8748095385041844056, guid: e6ed6a4e15627d4e189a5a7a1c70f4b3, type: 3}
+  characterSprite: {fileID: -8748095385041844056, guid: e6ed6a4e15627d4e189a5a7a1c70f4b3, type: 3}
   severityLevel: 9
   diagnosis: "P\xE9ritonite aigu\xEB"
   arrivalOrder: "1er arriv\xE9"

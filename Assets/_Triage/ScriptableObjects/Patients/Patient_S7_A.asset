@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: Philippe Cazal
   age: 61
-  portrait: {fileID: 0}
-  characterSprite: {fileID: 0}
+  portrait: {fileID: 6577390724149479785, guid: 2902b5029442535669b43a3f1b599f13, type: 3}
+  characterSprite: {fileID: 6577390724149479785, guid: 2902b5029442535669b43a3f1b599f13, type: 3}
   severityLevel: 3
   diagnosis: "Douleurs thoraciques non confirm\xE9es"
   arrivalOrder: "2\xE8me arriv\xE9"
