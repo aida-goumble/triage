@@ -29,7 +29,7 @@ public class HospitalState : ScriptableObject
     [SerializeField] private bool rareMedicationAvailable;
 
     [Header("Moral du chef de service")]
-    public int startingMoralScore = 100;
+    public int startingMoralScore = 50;
     [SerializeField] private int moralScore;
     public int MoralScore => moralScore;
 
@@ -47,7 +47,7 @@ public class HospitalState : ScriptableObject
     [Header("Jauges de réputation — valeurs initiales")]
     public int startingMedicalScore = 100;
     public int startingTeamTrust = 100;
-    public int startingPublicReputation = 100;
+    public int startingPublicReputation = 50;
     public int startingBudgetBalance = 100;
 
     [Header("Jauges — état courant (runtime)")]

@@ -18,8 +18,9 @@ MonoBehaviour:
     l'incident.
   medicalScoreDelta: -20
   teamTrustDelta: -15
-  publicReputationDelta: 5
+  publicReputationDelta: 15
   budgetBalanceDelta: 5
+  moralScoreDelta: -15
   triggersInternalInquiry: 0
   triggersStrike: 0
   triggersMediaCoverage: 0

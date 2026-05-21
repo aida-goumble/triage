@@ -19,9 +19,9 @@ MonoBehaviour:
     pas lui ?\""
   medicalScoreDelta: 0
   teamTrustDelta: 0
-  publicReputationDelta: 10
+  publicReputationDelta: -3
   budgetBalanceDelta: 0
-  moralScoreDelta: -15
+  moralScoreDelta: 5
   triggersInternalInquiry: 0
   triggersStrike: 0
   triggersMediaCoverage: 0

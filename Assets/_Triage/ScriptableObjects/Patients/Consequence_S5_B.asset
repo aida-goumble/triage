@@ -18,9 +18,9 @@ MonoBehaviour:
     Dans le couloir, trois infirmi\xE8res vous regardent diff\xE9remment. Avec respect."
   medicalScoreDelta: 0
   teamTrustDelta: 0
-  publicReputationDelta: -10
+  publicReputationDelta: -8
   budgetBalanceDelta: 0
-  moralScoreDelta: 30
+  moralScoreDelta: 12
   triggersInternalInquiry: 0
   triggersStrike: 0
   triggersMediaCoverage: 0

@@ -22,13 +22,15 @@ MonoBehaviour:
   currentSurgeons: 4
   currentBudget: 50000
   rareMedicationAvailable: 1
+  startingMoralScore: 50
+  moralScore: 0
   startingMedicalScore: 70
   startingTeamTrust: 70
-  startingPublicReputation: 70
+  startingPublicReputation: 50
   startingBudgetBalance: 70
   medicalScore: 70
   teamTrust: 70
-  publicReputation: 70
+  publicReputation: 50
   budgetBalance: 70
   criticalThreshold: 30
   scenariosPlayed: 0

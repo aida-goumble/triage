@@ -171,7 +171,7 @@ public class GameManager : MonoBehaviour
         if (IsSessionOver)
         {
             EventBus.OnSessionEnded?.Invoke();
-            SceneManager.LoadScene(endSessionScene);
+            LoadEndScene();
         }
         else
         {
@@ -196,6 +196,39 @@ public class GameManager : MonoBehaviour
     public void LoadTriageScene()   => SceneManager.LoadScene(triageScene);
     public void LoadPenseeScene()   => SceneManager.LoadScene(penseeScene);
     public void LoadCollegueScene() => SceneManager.LoadScene(collegueScene);
+    
+    private void LoadEndScene()
+    {
+        int moral  = hospitalState.MoralScore;
+        int reput  = hospitalState.PublicReputation;
+
+        // Fin 1 — Burn-out silencieux
+        // Moral effondré
+        if (moral <= 20)
+        {
+            SceneManager.LoadScene("EndBurnout");
+            return;
+        }
+
+        // Fin 2 — Héros malgré tout
+        // Moral élevé + Reputation basse
+        if (moral >= 70 && reput <= 35)
+        {
+            SceneManager.LoadScene("EndHero");
+            return;
+        }
+
+        // Fin 3 — Le système a gagné
+        // Reputation élevée + Moral bas
+        if (reput >= 70 && moral <= 35)
+        {
+            SceneManager.LoadScene("EndSystem");
+            return;
+        }
+
+        // Fin 4 — Équilibre fragile (tous les autres cas)
+        SceneManager.LoadScene("EndBalance");
+    }
 
     // =========================================================
     // VÉRIFICATION DES SEUILS CRITIQUES

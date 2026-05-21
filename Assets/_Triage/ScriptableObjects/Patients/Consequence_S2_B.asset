@@ -17,9 +17,9 @@ MonoBehaviour:
   laterText: 
   medicalScoreDelta: 0
   teamTrustDelta: 0
-  publicReputationDelta: -20
+  publicReputationDelta: 3
   budgetBalanceDelta: 0
-  moralScoreDelta: -15
+  moralScoreDelta: -8
   triggersInternalInquiry: 0
   triggersStrike: 0
   triggersMediaCoverage: 1
