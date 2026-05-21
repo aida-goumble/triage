@@ -15,14 +15,14 @@ MonoBehaviour:
   nomScenario: "\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\u2014
     SC\xC9NARIO 04 \xB7 LES DEUX GRANDS-PARENTS"
   dialogues:
-  - nomPersonnage: "SOPHIE M. \u2014 INFIRMI\xC8RE"
-    texte: "La famille d'Yvette est dans le couloir. Ils ne comprennent pas pourquoi
-      elle n'est pas pass\xE9e en premier."
-    personnageIndex: 0
-  - nomPersonnage: "KARIM B. \u2014 AIDE-SOIGNANT"
-    texte: "Le pronostic de Georges \xE9tait meilleur. M\xE9dicalement, c'est d\xE9fendable."
-    personnageIndex: 1
   - nomPersonnage: "DR. MARTIN \u2014 CHEF ADJOINT"
-    texte: "D\xE9fendable, oui. Mais elle \xE9tait arriv\xE9e avant lui. \xC7a, personne
-      ne l'oubliera."
+    texte: "Georges \xE9tait dans un \xE9tat plus stable. La famille va poser des
+      questions."
     personnageIndex: 2
+  - nomPersonnage: "KARIM B. \u2014 AIDE-SOIGNANT"
+    texte: "Elle \xE9tait arriv\xE9e en premi\xE8re. C'est le protocole, non ?"
+    personnageIndex: 1
+  - nomPersonnage: "SOPHIE M. \u2014 INFIRMI\xC8RE"
+    texte: "Protocole ou pas, Georges n'a pas eu sa chance. \xC7a reste dur \xE0
+      avaler."
+    personnageIndex: 0

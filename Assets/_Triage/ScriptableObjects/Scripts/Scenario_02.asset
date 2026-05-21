@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Scenario_02
   m_EditorClassIdentifier: Assembly-CSharp::ScenarioData
   scenarioId: 2
-  scenarioTitle: 
+  scenarioTitle: "L'enfant et le p\xE8re de famille"
   dilemmaType: 1
   patientA: {fileID: 11400000, guid: c47e8c1b759c9de94991a9ddc42f5749, type: 2}
   patientB: {fileID: 11400000, guid: c85fa75cce7696848aa986219bd8dfd6, type: 2}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f92409bfe5f034fbd0cff76f0a57aa, type: 3}
+  m_Name: CollegueScene_07
+  m_EditorClassIdentifier: Assembly-CSharp::CollegueSceneData
+  nomScenario: "\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\u2014
+    SC\xC9NARIO 07 \xB7 L'AVOCAT ET LA PLAINTE PR\xC9VENTIVE "
+  dialogues:
+  - nomPersonnage: "KARIM B. \u2014 AIDE-SOIGNANT"
+    texte: Il y a une convocation de la direction sur le bureau. L'avocat a tenu
+      sa promesse.
+    personnageIndex: 1
+  - nomPersonnage: "SOPHIE M. \u2014 INFIRMI\xC8RE"
+    texte: "Nadia est stabilis\xE9e. Elle nous a remerci\xE9s trois fois en partant."
+    personnageIndex: 0
+  - nomPersonnage: "DR. MARTIN \u2014 CHEF ADJOINT"
+    texte: "Aucun juge ne condamne une d\xE9cision m\xE9dicale document\xE9e. Il
+      a bien fait."
+    personnageIndex: 2

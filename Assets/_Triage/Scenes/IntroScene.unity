@@ -370,7 +370,7 @@ MonoBehaviour:
   fadeOutDuration: 2
   audioSource: {fileID: 1278824955}
   keySound: {fileID: 8300000, guid: 14b4226435121c64ab77c56c80c76fe6, type: 3}
-  nextScene: TriageScene
+  nextScene: TransitionScene
 --- !u!4 &1278824954
 Transform:
   m_ObjectHideFlags: 0

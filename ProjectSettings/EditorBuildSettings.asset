@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/_Triage/Scenes/MainMenu.unity
     guid: e52035027cda5dde4ae8206c519d7817
   - enabled: 1
+    path: Assets/_Triage/Scenes/IntroScene.unity
+    guid: cd6a7c527171c74429603f51ed14095b
+  - enabled: 1
     path: Assets/_Triage/Scenes/TriageScene.unity
     guid: 396e6cb3f308ac908a34bd2f5831fc51
   - enabled: 1
@@ -17,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Triage/Scenes/PenseeScene.unity
     guid: d394b6244b002d36dac49f29b870475d
+  - enabled: 1
+    path: Assets/_Triage/Scenes/TransitionScene.unity
+    guid: 1915da1a210754443900ece8ed363640
   - enabled: 1
     path: Assets/_Triage/Scenes/EndSession.unity
     guid: 3100c95494921c494bf5406ab08315b2

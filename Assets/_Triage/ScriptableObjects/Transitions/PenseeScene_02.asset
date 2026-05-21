@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PenseeSceneData
   nomScenario: "\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\u2014
     SC\xC9NARIO 02 \xB7 L'ENFANT ET LE PERE DE FAMILLE"
-  textePensee: "Il n'avait que 8 ans... Mais les enfants de Martin ne m\xE9ritaient
-    pas de perdre leur p\xE8re non plus.\nAi-je fait le bon choix ?"
+  textePensee: "Il n'avait que 8 ans, je me devais de le sauver... Mais les enfants
+    de Martin ne m\xE9ritaient pas de perdre leur p\xE8re non plus.\nAi-je fait le
+    bon choix ?"

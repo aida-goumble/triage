@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CollegueScene_03
   m_EditorClassIdentifier: Assembly-CSharp::CollegueSceneData
   nomScenario: "\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\u2014
-    SC\xC9NARIO 03 \xB7 L'INFIRMI\xC8RE ET LE SANS-ABRI"
+    SC\xC9NARIO 03 \xB7 LE MOTARD ET LE SANS-ABRI"
   dialogues:
   - nomPersonnage: "SOPHIE M. \u2014 INFIRMI\xC8RE"
     texte: Il a pris le sans-abri en premier. L'autre attendait depuis vingt minutes.
