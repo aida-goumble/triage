@@ -18,9 +18,9 @@ MonoBehaviour:
     L'\xE9quipe est sid\xE9r\xE9e. Une infirmi\xE8re quitte la salle sans un mot."
   medicalScoreDelta: 0
   teamTrustDelta: 0
-  publicReputationDelta: 5
+  publicReputationDelta: 10
   budgetBalanceDelta: 0
-  moralScoreDelta: -30
+  moralScoreDelta: -12
   triggersInternalInquiry: 0
   triggersStrike: 0
   triggersMediaCoverage: 0

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: Nadia Yusuf
   age: 29
-  portrait: {fileID: 0}
-  characterSprite: {fileID: 0}
+  portrait: {fileID: 353424152193817, guid: 478ce201a0b7363ccaaf8f6d3ec48921, type: 3}
+  characterSprite: {fileID: 353424152193817, guid: 478ce201a0b7363ccaaf8f6d3ec48921, type: 3}
   severityLevel: 9
   diagnosis: "Crise dr\xE9panocytaire s\xE9v\xE8re"
   arrivalOrder: "1er arriv\xE9"

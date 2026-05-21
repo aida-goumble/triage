@@ -19,9 +19,9 @@ MonoBehaviour:
     pendant des mois."
   medicalScoreDelta: 0
   teamTrustDelta: 0
-  publicReputationDelta: -25
+  publicReputationDelta: -12
   budgetBalanceDelta: 0
-  moralScoreDelta: -10
+  moralScoreDelta: 5
   triggersInternalInquiry: 0
   triggersStrike: 0
   triggersMediaCoverage: 0

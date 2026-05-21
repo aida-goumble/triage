@@ -19,7 +19,7 @@ MonoBehaviour:
   teamTrustDelta: 0
   publicReputationDelta: 10
   budgetBalanceDelta: 0
-  moralScoreDelta: -25
+  moralScoreDelta: -12
   triggersInternalInquiry: 0
   triggersStrike: 0
   triggersMediaCoverage: 0

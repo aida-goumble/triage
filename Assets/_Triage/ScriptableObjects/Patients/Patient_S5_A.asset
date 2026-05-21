@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: Thomas Auriac
   age: 19
-  portrait: {fileID: 0}
-  characterSprite: {fileID: 0}
+  portrait: {fileID: 6623944632570260825, guid: b6db65639669add428cade6d5c3c4c0d, type: 3}
+  characterSprite: {fileID: 6623944632570260825, guid: b6db65639669add428cade6d5c3c4c0d, type: 3}
   severityLevel: 6
   diagnosis: "Appendicite perfor\xE9e"
   arrivalOrder: "2\xE8me arriv\xE9"

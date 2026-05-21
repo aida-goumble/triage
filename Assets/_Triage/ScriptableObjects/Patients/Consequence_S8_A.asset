@@ -19,9 +19,9 @@ MonoBehaviour:
     une adolescente est morte."
   medicalScoreDelta: 0
   teamTrustDelta: 0
-  publicReputationDelta: -20
+  publicReputationDelta: 12
   budgetBalanceDelta: 0
-  moralScoreDelta: -20
+  moralScoreDelta: -5
   triggersInternalInquiry: 0
   triggersStrike: 0
   triggersMediaCoverage: 0

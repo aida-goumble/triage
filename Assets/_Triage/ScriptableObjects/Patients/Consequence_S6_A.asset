@@ -19,7 +19,7 @@ MonoBehaviour:
     en pleurant."
   medicalScoreDelta: 0
   teamTrustDelta: 0
-  publicReputationDelta: -5
+  publicReputationDelta: -12
   budgetBalanceDelta: 0
   moralScoreDelta: 10
   triggersInternalInquiry: 0

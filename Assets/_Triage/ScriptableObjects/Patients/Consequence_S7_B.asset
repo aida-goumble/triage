@@ -19,9 +19,9 @@ MonoBehaviour:
     L'\xE9quipe vous regarde diff\xE9remment."
   medicalScoreDelta: 0
   teamTrustDelta: 0
-  publicReputationDelta: -15
+  publicReputationDelta: -10
   budgetBalanceDelta: 0
-  moralScoreDelta: 25
+  moralScoreDelta: 12
   triggersInternalInquiry: 0
   triggersStrike: 0
   triggersMediaCoverage: 0

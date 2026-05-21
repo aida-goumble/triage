@@ -17,9 +17,9 @@ MonoBehaviour:
     vous soutient."
   medicalScoreDelta: 15
   teamTrustDelta: 10
-  publicReputationDelta: -10
+  publicReputationDelta: -15
   budgetBalanceDelta: -10
-  moralScoreDelta: 0
+  moralScoreDelta: 15
   triggersInternalInquiry: 0
   triggersStrike: 0
   triggersMediaCoverage: 1
