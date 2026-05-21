@@ -2305,7 +2305,7 @@ MonoBehaviour:
   texteContinuer: {fileID: 654542988}
   consequence: {fileID: 561188815}
   texteConsequence: {fileID: 657024134}
-  btnSkip: {fileID: 0}
+  btnSkip: {fileID: 1108617346}
 --- !u!1 &1953684524
 GameObject:
   m_ObjectHideFlags: 0
