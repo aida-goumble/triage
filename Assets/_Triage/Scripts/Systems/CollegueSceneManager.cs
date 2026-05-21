@@ -165,4 +165,9 @@ public class CollegueSceneManager : MonoBehaviour
         }
         cg.alpha = 0f;
     }
+    
+    public void SkipScene()
+    {
+        GameManager.Instance.ContinueToNextScenario();
+    }
 }

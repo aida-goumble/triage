@@ -142,4 +142,9 @@ public class PenseeSceneManager : MonoBehaviour
         }
         cg.alpha = 0f;
     }
+    
+    public void SkipScene()
+    {
+        GameManager.Instance.ContinueToNextScenario();
+    }
 }
