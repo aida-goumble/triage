@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: Leroux, C.
   age: 8
-  portrait: {fileID: 6978604757079500535, guid: 3c4a7b35c5fd5fa1d87bd99c8dca76f4, type: 3}
+  portrait: {fileID: 2851552407561426261, guid: 35df1f15affa40c09adf58f9fff878ac, type: 3}
   characterSprite: {fileID: 6978604757079500535, guid: 3c4a7b35c5fd5fa1d87bd99c8dca76f4, type: 3}
   severityLevel: 9
   diagnosis: "Traumatisme cr\xE2nien s\xE9v\xE8re"

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: "B\xE9b\xE9 Moreau"
   age: 0
-  portrait: {fileID: 8301626755924227713, guid: 2a339b9d95ba6da5f8a0fbf638f8f0c3, type: 3}
-  characterSprite: {fileID: 8301626755924227713, guid: 2a339b9d95ba6da5f8a0fbf638f8f0c3, type: 3}
+  portrait: {fileID: 954990089545255648, guid: e15b7199085a8600b94d62fe0a5f4414, type: 3}
+  characterSprite: {fileID: 954990089545255648, guid: e15b7199085a8600b94d62fe0a5f4414, type: 3}
   severityLevel: 9
   diagnosis: "Grand pr\xE9matur\xE9 en d\xE9tresse \u2014 26 semaines"
   arrivalOrder: "1er arriv\xE9"
