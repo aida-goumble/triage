@@ -26,6 +26,9 @@ public class CollegueSceneManager : MonoBehaviour
     [Header("Conséquence du choix")]
     [SerializeField] private CanvasGroup consequence;
     [SerializeField] private TMP_Text texteConsequence;
+    
+    [Header("Bouton Skip")]
+    [SerializeField] private UnityEngine.UI.Button btnSkip;
 
     private bool _peutContinuer = false;
 
@@ -68,6 +71,8 @@ public class CollegueSceneManager : MonoBehaviour
             texteConsequence.text = GameManager.Instance.LastConsequence.immediateText + "\n" + GameManager.Instance.LastConsequence.laterText;
             texteConsequence.maxVisibleCharacters = 0;
         }
+        if (btnSkip != null)
+            btnSkip.onClick.AddListener(SkipScene);
 
         StartCoroutine(JouerSequence());
     }
@@ -168,6 +173,9 @@ public class CollegueSceneManager : MonoBehaviour
     
     public void SkipScene()
     {
-        GameManager.Instance.ContinueToNextScenario();
+        if (GameManager.Instance != null)
+            GameManager.Instance.ContinueToNextScenario();
+        else
+            UnityEngine.SceneManagement.SceneManager.LoadScene("TriageScene");
     }
 }
