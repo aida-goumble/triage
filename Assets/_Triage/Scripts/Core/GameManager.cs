@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
     [Header("Noms des scènes Unity")]
     [SerializeField] private string mainMenuScene    = "MainMenu";
     [SerializeField] private string triageScene      = "TriageScene";
+    [SerializeField] private string transitionScene  = "TransitionScene";
     [SerializeField] private string penseeScene      = "PenseeScene";
     [SerializeField] private string collegueScene    = "CollegueScene";
     [SerializeField] private string endSessionScene  = "EndSession";
@@ -110,7 +111,7 @@ public class GameManager : MonoBehaviour
 
         EventBus.OnSessionStarted?.Invoke();
 
-        LoadTriageScene();
+        LoadTransitionScene();
     }
 
     // =========================================================
@@ -153,7 +154,7 @@ public class GameManager : MonoBehaviour
         CheckCriticalThresholds();
 
         // 7. Passer à l'écran de résultat
-        if (consequence.publicReputationDelta < 0)
+        if (consequence.publicReputationDelta < consequence.moralScoreDelta)
             LoadCollegueScene();
         else
             LoadPenseeScene();
@@ -175,7 +176,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            LoadTriageScene();
+            LoadTransitionScene(); // passe toujours par TransitionScene avant TriageScene
         }
     }
 
@@ -188,14 +189,23 @@ public class GameManager : MonoBehaviour
         ContinueToNextScenario();
     }
 
+    /// <summary>
+    /// Appelé par PenseeSceneManager quand le joueur clique pour continuer.
+    /// </summary>
+    public void OnPenseeSceneComplete()
+    {
+        ContinueToNextScenario();
+    }
+
     // =========================================================
     // NAVIGATION ENTRE SCÈNES
     // =========================================================
 
-    public void LoadMainMenu()      => SceneManager.LoadScene(mainMenuScene);
-    public void LoadTriageScene()   => SceneManager.LoadScene(triageScene);
-    public void LoadPenseeScene()   => SceneManager.LoadScene(penseeScene);
-    public void LoadCollegueScene() => SceneManager.LoadScene(collegueScene);
+    public void LoadMainMenu()        => SceneManager.LoadScene(mainMenuScene);
+    public void LoadTriageScene()     => SceneManager.LoadScene(triageScene);
+    public void LoadTransitionScene() => SceneManager.LoadScene(transitionScene);
+    public void LoadPenseeScene()     => SceneManager.LoadScene(penseeScene);
+    public void LoadCollegueScene()   => SceneManager.LoadScene(collegueScene);
     
     private void LoadEndScene()
     {
