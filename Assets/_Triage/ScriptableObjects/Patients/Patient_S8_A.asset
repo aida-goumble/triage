@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: "Hassan Traor\xE9"
   age: 45
-  portrait: {fileID: -8158671172158525653, guid: 86bf8c9eeada074b087f71e3c8e852d7, type: 3}
-  characterSprite: {fileID: -8158671172158525653, guid: 86bf8c9eeada074b087f71e3c8e852d7, type: 3}
+  portrait: {fileID: 3618870988002770414, guid: f4a5c83aa1dd7a3d2b48b34be519836c, type: 3}
+  characterSprite: {fileID: 3618870988002770414, guid: f4a5c83aa1dd7a3d2b48b34be519836c, type: 3}
   severityLevel: 8
   diagnosis: "Greffe cardiaque \u2014 1er sur liste depuis 8 mois"
   arrivalOrder: "1er arriv\xE9"

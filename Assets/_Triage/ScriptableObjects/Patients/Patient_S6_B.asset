@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientData
   patientName: Amina Diallo
   age: 22
-  portrait: {fileID: 7900750524990792099, guid: be6d2f3d3a771580ab6296c705be9bc9, type: 3}
-  characterSprite: {fileID: 7900750524990792099, guid: be6d2f3d3a771580ab6296c705be9bc9, type: 3}
+  portrait: {fileID: 1414670640295239466, guid: 032f847e783bcbccea9ae760826f89a6, type: 3}
+  characterSprite: {fileID: 1414670640295239466, guid: 032f847e783bcbccea9ae760826f89a6, type: 3}
   severityLevel: 8
   diagnosis: "Sepsis post-op\xE9ratoire"
   arrivalOrder: "2\xE8me arriv\xE9"
