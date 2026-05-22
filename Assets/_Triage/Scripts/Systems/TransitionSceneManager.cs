@@ -26,6 +26,10 @@ public class TransitionSceneManager : MonoBehaviour
     [SerializeField] private CanvasGroup titreScenario;   // "L'enfant et le père de famille"
     [SerializeField] private CanvasGroup tagType;         // "[ DILEMME ÉTHIQUE ]"
 
+    [Header("Son clavier")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip   keySound;
+
     [Header("Timing")]
     [SerializeField] private float dureeFonduEntrant  = 1.0f;
     [SerializeField] private float delaiAvantTitre    = 0.5f;
@@ -135,19 +139,31 @@ public class TransitionSceneManager : MonoBehaviour
         if (tmp == null)
             yield break;
 
-        // S'assurer que le CanvasGroup est visible
         SetAlpha(cg, 1f);
-
-        // Forcer la mise à jour du mesh pour obtenir textInfo correct
         tmp.ForceMeshUpdate();
-
         tmp.maxVisibleCharacters = 0;
-        int total = tmp.textInfo.characterCount;
 
-        for (int i = 0; i <= total; i++)
+        string texte = tmp.text;
+
+        for (int i = 0; i < texte.Length; i++)
         {
-            tmp.maxVisibleCharacters = i;
-            yield return new WaitForSeconds(vitesse);
+            tmp.maxVisibleCharacters = i + 1;
+            char c = texte[i];
+
+            if (c != ' ' && c != '\n' && audioSource != null && keySound != null)
+            {
+                audioSource.pitch = Random.Range(0.9f, 1.1f);
+                audioSource.PlayOneShot(keySound, 0.4f);
+            }
+
+            if (c == '.' || c == '!')
+                yield return new WaitForSeconds(vitesse * 8f);
+            else if (c == ',')
+                yield return new WaitForSeconds(vitesse * 4f);
+            else if (c == '\n')
+                yield return new WaitForSeconds(vitesse * 3f);
+            else
+                yield return new WaitForSeconds(vitesse);
         }
     }
 

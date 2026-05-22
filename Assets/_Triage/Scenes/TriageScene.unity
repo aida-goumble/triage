@@ -3093,7 +3093,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -7929,13 +7929,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f2c1b5ed949906b49b0dd317d4355311, type: 2}
   - {fileID: 11400000, guid: b07bb50279c1ff9479e088c23a01540d, type: 2}
   - {fileID: 11400000, guid: 8228a80ef9249c74788622491d4f1af0, type: 2}
+  - {fileID: 11400000, guid: bc7aacf0a34a31e43a77b2919e81ee37, type: 2}
+  - {fileID: 11400000, guid: 9a734fb7e1abab246a857a2f583db869, type: 2}
+  - {fileID: 11400000, guid: 08fbe8ada06f1214c920a8205f37b055, type: 2}
+  - {fileID: 11400000, guid: fcedc23067307234eb1d598e84e34ffe, type: 2}
   collegueSceneDatas:
   - {fileID: 11400000, guid: dcca28da1f645f349a69706dad564f86, type: 2}
   - {fileID: 11400000, guid: 1607b982488fa6246a3e2b7a3c617bcf, type: 2}
   - {fileID: 11400000, guid: a330996ff12bb134d800caac8f2e8db1, type: 2}
   - {fileID: 11400000, guid: 244ede4e77e92c14dbe872de8f495532, type: 2}
+  - {fileID: 11400000, guid: cd3d5197d20db4640bd2ea1c4f0ee4c9, type: 2}
+  - {fileID: 11400000, guid: 27c3505780d3d834ea69e98c64bd6bbc, type: 2}
+  - {fileID: 11400000, guid: 0d36c882c0181874e8e06d6a656594ac, type: 2}
+  - {fileID: 11400000, guid: db9814b2564551a4484c5e048a06a4e2, type: 2}
   mainMenuScene: MainMenu
   triageScene: TriageScene
+  transitionScene: TransitionScene
   penseeScene: PenseeScene
   collegueScene: CollegueScene
   endSessionScene: EndSession
@@ -8291,7 +8300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -9, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1653276755
