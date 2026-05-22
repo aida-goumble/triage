@@ -58,27 +58,25 @@ public class MainMenuManager : MonoBehaviour
 
     void OnJouer()
     {
-        bool hasSave = PlayerPrefs.HasKey(SAVE_KEY);
+        bool hasSave = PlayerPrefs.HasKey("HasSave");
 
         if (!hasSave)
         {
-            // Nouvelle partie — tout réinitialiser
             PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
 
-            // Réinitialise le GameManager si présent
             if (GameManager.Instance != null)
-            {
-                GameManager.Instance.StartSession();
-                // StartSession charge TriageScene, on veut Intro d'abord
-                // donc on stop et on charge Intro manuellement
-            }
+                GameManager.Instance.ResetSession();
 
             SceneManager.LoadScene("IntroScene");
         }
         else
         {
-            // Continuer — reprendre où on en était
+            // Restaure l'index du scénario sauvegardé
+            int savedIndex = PlayerPrefs.GetInt("SavedScenarioIndex", 0);
+            if (GameManager.Instance != null)
+                GameManager.Instance.RestoreSession(savedIndex);
+
             SceneManager.LoadScene(sceneTriageScene);
         }
     }

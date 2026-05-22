@@ -270,4 +270,16 @@ public class GameManager : MonoBehaviour
             ? CurrentScenario.consequenceIfA
             : CurrentScenario.consequenceIfB;
     }
+    
+    public void RestoreSession(int scenarioIndex)
+    {
+        CurrentScenarioIndex = scenarioIndex;
+        EventBus.OnSessionStarted?.Invoke();
+    }
+    
+    public void ResetSession()
+    {
+        CurrentScenarioIndex = 0;
+        hospitalState.Reset();
+    }
 }

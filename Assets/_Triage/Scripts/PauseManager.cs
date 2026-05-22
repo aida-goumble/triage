@@ -43,6 +43,9 @@ public class PauseManager : MonoBehaviour
     public void AllerMainMenu()
     {
         Time.timeScale = 1f; // important — remettre avant de changer de scène
+        PlayerPrefs.SetInt("HasSave", 1);
+        PlayerPrefs.SetInt("SavedScenarioIndex", GameManager.Instance.CurrentScenarioIndex);
+        PlayerPrefs.Save();
         GameManager.Instance.LoadMainMenu();
     }
 }
